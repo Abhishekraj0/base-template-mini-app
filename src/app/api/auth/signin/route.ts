@@ -45,15 +45,15 @@ export async function POST(request: NextRequest) {
     }
 
     // Check if email is verified
-    if (!user.email_verified) {
-      return NextResponse.json(
-        { 
-          error: "Please verify your email address before signing in. Check your email for the verification link.",
-          requiresVerification: true 
-        },
-        { status: 403 }
-      );
-    }
+    // if (!user.email_verified) {
+    //   return NextResponse.json(
+    //     { 
+    //       error: "Please verify your email address before signing in. Check your email for the verification link.",
+    //       requiresVerification: true 
+    //     },
+    //     { status: 403 }
+    //   );
+    // }
 
     return NextResponse.json({
       message: "Sign in successful!",
